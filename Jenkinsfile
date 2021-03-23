@@ -6,9 +6,10 @@ pipeline {
             steps {
                 bat 'mvn install'
             }
-            steps('Build Docker image'){
-                bat 'docker build . -t yuvarakshanas/ems_trimble'
-                
+        }
+         stage('Build Docker image') {
+            steps {
+                 bat 'docker build . -t yuvarakshanas/ems_trimble'
+            }
          }
     }
-}
