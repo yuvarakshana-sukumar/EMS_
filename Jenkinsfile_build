@@ -1,6 +1,6 @@
 node{
 stage('SCM checkout'){
-git branch: 'trimble_ems', credentialsId: 'e10d97b0-1856-48e9-bd27-1ca3c03910ed', url: 'ssh://git@bitbucket.trimble.tools/eeh/ems-enquiry-portal.git'
+git 'https://github.com/yuvarakshana-sukumar/EMS_.git/'
 }
 stage('Build'){
    def mvnHome= tool name: '3', type: 'maven'
